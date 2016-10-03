@@ -40,7 +40,14 @@
 <div class="sidebar-nav navbar-collapse">
     <ul class="nav" id="side-menu">
         <li>
-            <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+            <%= link_to backoffice_path do %>
+                <i class="fa fa-dashboard fa-fw"></i> Dashboard
+            <% end %>
+        </li>
+        <li>
+            <%= link_to backoffice_categories_index_path do %>
+                <i class="fa fa-th-list fa-fw"></i> Categorias
+            <% end %>
         </li>
     </ul>
 </div>
