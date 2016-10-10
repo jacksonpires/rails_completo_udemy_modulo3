@@ -117,6 +117,7 @@ GEM
     rails-assets-bootstrap (3.3.7)
       rails-assets-jquery (>= 1.9.1, < 4)
     rails-assets-jquery (3.1.0)
+    rails-assets-notifyjs (0.4.2)
     rails-deprecated_sanitizer (1.0.3)
       activesupport (>= 4.2.0.alpha)
     rails-dom-testing (1.0.7)
@@ -196,6 +197,7 @@ DEPENDENCIES
   jquery-rails
   rails (= 4.2.5)
   rails-assets-bootstrap (= 3.3.7)!
+  rails-assets-notifyjs!
   rails-erd
   rails-i18n
   sass-rails (~> 5.0)
