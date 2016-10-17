@@ -22,6 +22,11 @@
         <div class="col-lg-6">
             <%= form_for([:backoffice, @admin]) do |f| %>
                 <div class="form-group">
+                    <label>Nome</label>
+                    <%= f.text_field :name, class:"form-control", placeholder:"Nome do administrador" %>
+
+                </div>
+                <div class="form-group">
                     <label>Email</label>
                     <%= f.text_field :email, class:"form-control", placeholder:"Email do administrador" %>
 
