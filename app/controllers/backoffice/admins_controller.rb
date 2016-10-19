@@ -2,7 +2,8 @@ class Backoffice::AdminsController < BackofficeController
   before_action :set_admin, only: [:edit, :update, :destroy]
 
   def index
-    @admins = Admin.all
+    #@admins = Admin.all
+    @admins = Admin.with_full_access
   end
 
   def new
