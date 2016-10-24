@@ -1,7 +1,13 @@
 class Admin < ActiveRecord::Base
-  enum role: {:full_access => 0, :restricted_access => 1}
+  # Constants
+  ROLES = {:full_access => 0, :restricted_access => 1}
 
-  scope :with_full_access, -> { where(role: 'full_access') }
+  # Enums
+  enum role: ROLES
+
+  # Scopes
+  scope :with_full_access, -> { where(role: ROLES[:full_access]) }
+  scope :with_restricted_access, -> { where(role: ROLES[:restricted_access]) }
 
   # def self.with_full_access
   #   where(role: 'full_access')
