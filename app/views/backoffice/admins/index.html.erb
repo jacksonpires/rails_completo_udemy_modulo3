@@ -1,8 +1,8 @@
-<h1 class="page-header">Administradores</h1>
+<h1 class="page-header"><%= @admins.model_name.human(count: 2) %></h1>
 
     <div class="panel panel-default">
         <div class="panel-heading">
-            Listando Administradores
+            <%= t('messages.listing', model: @admins.model_name.human(count: 2)) %>
             <%= link_to new_backoffice_admin_path, class:"btn btn-success btn-circle pull-right", style:"margin-top: -5px" do %>
                 <i class="fa fa-plus"></i>
             <% end %>
@@ -14,9 +14,9 @@
                     <thead>
                         <tr>
                             <th>#</th>
-                            <th>Nome</th>
-                            <th>Email</th>
-                            <th>Tipo de Acesso</th>
+                            <th><%= @admins.model.human_attribute_name('name') %></th>
+                            <th><%= @admins.model.human_attribute_name('email') %></th>
+                            <th><%= @admins.model.human_attribute_name('role') %></th>
                             <th></th>
                         </tr>
                     </thead>
@@ -26,18 +26,18 @@
                             <td><%= admin.id %></td>
                             <td><%= admin.name %></td>
                             <td><%= admin.email %></td>
-                            <td><%= admin.role_br %></td>
+                            <td><%= admin.role_i18n %></td>
                             <td style="width: 150px">
                                 <%= link_to edit_backoffice_admin_path(admin), class: "btn btn-primary btn-circle" do %>
                                     <i class="fa fa-edit"></i>
                                 <% end %>
 
                                 <% if current_admin.id != admin.id %>
-                                    <%= link_to backoffice_admin_path(admin), method: :delete, class: "btn btn-danger btn-circle", data: {confirm: "Você deseja realmente excluir (<b>#{admin.email}</b>)?"} do %>
+                                    <%= link_to backoffice_admin_path(admin), method: :delete, class: "btn btn-danger btn-circle", data: {confirm: t('messages.confirm_with', item: admin.name )} do %>
                                         <i class="fa fa-minus"></i>
                                     <% end %>
                                 <% else %>
-                                    <%= link_to '#', disabled: "disabled", class: "btn btn-danger btn-circle" do %>
+                                    <%= link_to '#', disabled: 'disabled', class: "btn btn-danger btn-circle" do %>
                                         <i class="fa fa-minus"></i>
                                     <% end %>
 

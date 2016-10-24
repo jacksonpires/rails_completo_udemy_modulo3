@@ -1,4 +1,4 @@
-<h1 class="page-header">Administradores</h1>
+<h1 class="page-header"><%= @admin.model_name.human(count: 2) %></h1>
 
 <% if @admin.errors.any? %>
     <div class="alert alert-danger alert-dismissable">
@@ -15,29 +15,29 @@
 
 <div class="panel panel-default">
     <div class="panel-heading">
-        <%= action %>
+        <%= action_message %>
     </div>
     <!-- /.panel-heading -->
     <div class="panel-body">
         <div class="col-lg-6">
             <%= form_for([:backoffice, @admin]) do |f| %>
                 <div class="form-group">
-                    <label>Nome</label>
+                    <%= f.label :name %>
                     <%= f.text_field :name, class:"form-control", placeholder:"Nome do administrador" %>
 
                 </div>
                 <div class="form-group">
-                    <label>Email</label>
+                    <%= f.label :email %>
                     <%= f.text_field :email, class:"form-control", placeholder:"Email do administrador" %>
 
                 </div>
                 <div class="form-group">
-                    <label>Senha</label>
+                    <%= f.label :password %>
                     <%= f.password_field :password, class:"form-control", placeholder:"Senha" %>
 
                 </div>
                 <div class="form-group">
-                    <label>Confirmação da Senha</label>
+                    <%= f.label :password_confirmation %>
                     <%= f.password_field :password_confirmation, class:"form-control", placeholder:"Confirmação da senha" %>
 
                 </div>

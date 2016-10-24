@@ -1,0 +1,45 @@
+'pt-BR':
+  activerecord:
+    models:
+      member:
+        one: Usuário
+        other: Usuários
+      admin:
+        one: Administrador
+        other: Administradores
+      category:
+        one: Categoria
+        other: Categorias
+      ad:
+        one: Anúncio
+        other: Anúncios
+    attributes:
+      member:
+        id: Código
+        created_at: Criado em
+        updated_at: Atualizado em
+        email: E-mail
+        password: Senha
+        password_confirmation: Confirmação de senha
+      admin:
+        id: Código
+        created_at: Criado em
+        updated_at: Atualizado em
+        email: E-mail
+        password: Senha
+        password_confirmation: Confirmação de senha
+        name: Nome
+        role: Tipo de Acesso
+      category:
+        id: Código
+        created_at: Criado em
+        updated_at: Atualizado em
+        description: Descrição
+      ad:
+        id: Código
+        created_at: Criado em
+        updated_at: Atualizado em
+        title: Título
+        description: Descrição
+        member_id: Código do usuário
+        category_id: Código da categoria

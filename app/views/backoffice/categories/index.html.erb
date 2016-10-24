@@ -1,8 +1,8 @@
-<h1 class="page-header">Categorias</h1>
+<h1 class="page-header"><%= @categories.model_name.human(count: 2) %></h1>
 
     <div class="panel panel-default">
         <div class="panel-heading">
-            Listando Categorias
+            <%= t('messages.listing', model: @categories.model_name.human(count: 2)) %>
             <%= link_to new_backoffice_category_path, class:"btn btn-success btn-circle pull-right", style:"margin-top: -5px" do %>
                 <i class="fa fa-plus"></i>
             <% end %>
@@ -14,7 +14,7 @@
                     <thead>
                         <tr>
                             <th>#</th>
-                            <th>Descrição</th>
+                            <th><%= @categories.model.human_attribute_name('description') %></th>
                             <th></th>
                         </tr>
                     </thead>

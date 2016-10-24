@@ -1,4 +1,4 @@
-<h1 class="page-header">Categorias</h1>
+<h1 class="page-header"><%= @category.model_name.human(count: 2) %></h1>
 
 <% if @category.errors.any? %>
     <div class="alert alert-danger alert-dismissable">
@@ -15,14 +15,14 @@
 
 <div class="panel panel-default">
     <div class="panel-heading">
-        <%= action %>
+        <%= action_message %>
     </div>
     <!-- /.panel-heading -->
     <div class="panel-body">
         <div class="col-lg-6">
             <%= form_for([:backoffice, @category]) do |f| %>
                 <div class="form-group">
-                    <label>Descrição</label>
+                    <%= f.label :description %>
                     <%= f.text_field :description, class:"form-control", placeholder:"Ex: Animais/Pet" %>
 
                 </div>
