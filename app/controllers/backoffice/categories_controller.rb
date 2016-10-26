@@ -13,18 +13,19 @@ class Backoffice::CategoriesController < BackofficeController
     @category = CategoryService.create(params_category)
 
     unless @category.errors.any?
-      redirect_to backoffice_categories_path, notice: "A categoria (#{@category.description}) foi cadastrada com sucesso!"
+      redirect_to backoffice_categories_path, notice: I18n.t('messages.created_with', item: @category.description)
     else
       render :new
     end
   end
 
   def edit
+    # Uses before_action to set the category
   end
 
   def update
     if @category.update(params_category)
-      redirect_to backoffice_categories_path, notice: "A categoria (#{@category.description}) foi atualizada com sucesso!"
+      redirect_to backoffice_categories_path, notice: I18n.t('messages.updated_with', item: @category.description)
     else
       render :edit
     end

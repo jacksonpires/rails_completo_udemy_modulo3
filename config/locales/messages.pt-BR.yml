@@ -9,5 +9,8 @@
     new: Novo %{model}
     errors: ocorreram...
     created: Item criado com sucesso!
+    created_with: "%{item} foi criado com sucesso!"
     updated: Item atualizado com sucesso!
+    updated_with: "%{item} foi atualizado com sucesso!"
     destroyed: Item excluído com sucesso!
+    destroyed_with: "%{item} foi excluído com sucesso!"
