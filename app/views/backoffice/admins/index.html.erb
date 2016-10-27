@@ -3,9 +3,13 @@
     <div class="panel panel-default">
         <div class="panel-heading">
             <%= t('messages.listing', model: @admins.model_name.human(count: 2)) %>
-            <%= link_to new_backoffice_admin_path, class:"btn btn-success btn-circle pull-right", style:"margin-top: -5px" do %>
-                <i class="fa fa-plus"></i>
+
+            <% if policy(@admins).new? %>
+                <%= link_to new_backoffice_admin_path, class:"btn btn-success btn-circle pull-right", style:"margin-top: -5px" do %>
+                    <i class="fa fa-plus"></i>
+                <% end %>
             <% end %>
+
         </div>
         <!-- /.panel-heading -->
         <div class="panel-body">
