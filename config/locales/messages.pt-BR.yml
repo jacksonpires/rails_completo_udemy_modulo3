@@ -14,3 +14,4 @@
     updated_with: "%{item} foi atualizado com sucesso!"
     destroyed: Item excluído com sucesso!
     destroyed_with: "%{item} foi excluído com sucesso!"
+    not_authorized: Você não está autorizado a executar essa ação.
