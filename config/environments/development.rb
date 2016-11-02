@@ -11,7 +11,11 @@ Rails.application.configure do
   config.web_console.whitelisted_ips = ENV['TRUSTED_IP']
 
   # Devise Config
-  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  # config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+  # MailCatcher
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = { :address => "localhost", :port => 1025 }
 
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development

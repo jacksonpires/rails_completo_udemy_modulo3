@@ -40,7 +40,7 @@
                                     <i class="fa fa-edit"></i>
                                 <% end %>
 
-                                <% if current_admin.id != admin.id %>
+                                <% if (current_admin.id != admin.id) && policy(@admins).destroy? %>
                                     <%= link_to backoffice_admin_path(admin), method: :delete, class: "btn btn-danger btn-circle", data: {confirm: t('messages.confirm_with', item: admin.name )} do %>
                                         <i class="fa fa-minus"></i>
                                     <% end %>
@@ -48,7 +48,6 @@
                                     <%= link_to '#', disabled: 'disabled', class: "btn btn-danger btn-circle" do %>
                                         <i class="fa fa-minus"></i>
                                     <% end %>
-
                                 <% end %>
                             </td>
                         </tr>
