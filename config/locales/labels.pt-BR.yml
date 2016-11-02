@@ -1,0 +1,8 @@
+'pt-BR':
+  labels:
+    login: Login
+    identify_yourself: Identifique-se
+    remember_me: Lembrar-se de mim
+    enter: Entrar
+    email: E-mail
+    password: Senha

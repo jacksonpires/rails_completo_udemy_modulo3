@@ -3,24 +3,25 @@
       <div class="col-md-4 col-md-offset-4">
           <div class="login-panel panel panel-default">
               <div class="panel-heading">
-                  <h3 class="panel-title">Please Sign In</h3>
+                  <h3 class="panel-title"><%= t('labels.identify_yourself') %></h3>
               </div>
               <div class="panel-body">
                   <%= form_for(resource, as: resource_name, url: session_path(resource_name, role: "form")) do |f| %>
                       <fieldset>
                           <div class="form-group">
-                              <%= f.email_field :email, autofocus: true, class: "form-control", placeholder: "E-mail", type: "email", autofocus: "autofocus" %>
+                              <%= f.email_field :email, autofocus: true, class: "form-control", placeholder: "#{t('labels.email')}", type: "email", autofocus: "autofocus" %>
                           </div>
                           <div class="form-group">
-                              <%= f.password_field :password, autocomplete: "off", class: "form-control", placeholder:"Password", type:"password" %>
+                              <%= f.password_field :password, autocomplete: "off", class: "form-control", placeholder:"#{t('labels.password')}", type:"password" %>
                           </div>
                           <div class="checkbox">
                               <label>
-                                <%= f.check_box :remember_me %>Remember Me
+                                <%= f.check_box :remember_me %>
+                                <%= t('labels.remember_me') %>
                               </label>
                           </div>
                           <!-- Change this to a button or input when using this as a form -->
-                          <%= f.submit "Log in", class: "btn btn-lg btn-success btn-block" %>
+                          <%= f.submit "#{t('labels.enter')}", class: "btn btn-lg btn-success btn-block" %>
                       </fieldset>
                   <% end %>
               </div>
@@ -28,5 +29,11 @@
       </div>
   </div>
 </div>
+
+<% flash.each do |key, value| %>
+  <script>
+      $.notify("<%= value %>", "info");
+  </script>
+<% end %>
 
 
