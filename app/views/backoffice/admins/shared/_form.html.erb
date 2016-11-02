@@ -32,16 +32,16 @@
 
                 </div>
 
-
-                <div class="form-group">
-                    <%= f.label :role %>
-                    <%= f.collection_radio_buttons(:role, options_for_roles, :id, :description) do |b| %>
-                        <div class="radio">
-                            <%= b.label { b.radio_button + b.text} %>
-                        </div>
-                    <% end %>
-                </div>
-
+                <% if policy(@admin).edit? %>
+                    <div class="form-group">
+                        <%= f.label :role %>
+                        <%= f.collection_radio_buttons(:role, options_for_roles, :id, :description) do |b| %>
+                            <div class="radio">
+                                <%= b.label { b.radio_button + b.text} %>
+                            </div>
+                        <% end %>
+                    </div>
+                <% end %>
 
                 <div class="form-group">
                     <%= f.label :password %>
