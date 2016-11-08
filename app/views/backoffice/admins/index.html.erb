@@ -23,7 +23,6 @@
                         <tr>
                             <th>#</th>
                             <th><%= @admins.model.human_attribute_name('name') %></th>
-                            <th><%= @admins.model.human_attribute_name('email') %></th>
                             <th><%= @admins.model.human_attribute_name('role') %></th>
                             <th></th>
                         </tr>
@@ -33,9 +32,11 @@
                         <tr>
                             <td><%= admin.id %></td>
                             <td><%= admin.name %></td>
-                            <td><%= admin.email %></td>
                             <td><%= admin.role_i18n %></td>
                             <td style="width: 150px">
+                                <%= link_to '#', class: "btn btn-info btn-circle", remote: true do %>
+                                    <i class="fa fa-envelope"></i>
+                                <% end %>
                                 <%= link_to edit_backoffice_admin_path(admin), class: "btn btn-primary btn-circle" do %>
                                     <i class="fa fa-edit"></i>
                                 <% end %>
@@ -59,3 +60,5 @@
         </div>
         <!-- /.panel-body -->
     </div>
+
+<%= render partial: 'backoffice/admins/shared/send_mail' %>
