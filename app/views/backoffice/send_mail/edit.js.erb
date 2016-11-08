@@ -1,0 +1,15 @@
+$(function(){
+  let $sendMailModal = $('#sendMailModal');
+
+  // Setting email and name on Form
+  $('#recipient-name').val('<%= @admin.email %>');
+  $('h4.modal-title').text("<%= I18n.t('labels.send_message_to', name: @admin.name) %>");
+
+  // Shows Modal
+  $sendMailModal.modal();
+
+  // Set focus on Message Text after modal show
+  $sendMailModal.on('shown.bs.modal', function () {
+    $('#message-text').focus();
+  })
+});
