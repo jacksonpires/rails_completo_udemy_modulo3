@@ -7,5 +7,5 @@ $(function(){
   $('#message-text').val('');
 
   // Show Message
-  $.notify('Email enviado com sucesso!', "success")
+  $.notify('<%= @notify_message%>', "<%= @notify_flag %>")
 });
