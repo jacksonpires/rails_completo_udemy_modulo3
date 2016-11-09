@@ -10,3 +10,4 @@
     new_message: Nova Mensagem
     send_message_to: Enviar mensagem para %{name}
     recipient: Destinatário
+    subject: Assunto
