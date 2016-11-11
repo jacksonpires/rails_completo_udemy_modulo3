@@ -90,6 +90,7 @@ GEM
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
     json (1.8.3)
+    lerolero_generator (1.0.1)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
     mail (2.6.4)
@@ -224,6 +225,7 @@ DEPENDENCIES
   foreman
   jbuilder (~> 2.0)
   jquery-rails
+  lerolero_generator
   mailcatcher
   pundit
   rails (= 4.2.5)

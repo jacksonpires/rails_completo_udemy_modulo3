@@ -8,7 +8,7 @@
       <div class="modal-body">
         <%= form_tag(backoffice_send_mail_index_path, remote: true) do %>
           <div class="form-group">
-            <label for="recipient-name" class="control-label"><%= t('labels.recipient') %></label>
+            <label for="recipient-text" class="control-label"><%= t('labels.recipient') %></label>
             <%= text_field_tag(:'recipient-text', nil, class: "form-control", readonly: "readonly") %>
           </div>
           <div class="form-group">
