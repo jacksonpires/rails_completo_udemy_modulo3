@@ -51,7 +51,7 @@
                         <div class="thumbnail">
                             <img src="http://placehold.it/320x150" alt="">
                             <div class="caption">
-                                <h4 class="pull-right">$24.99</h4>
+                                <h4 class="pull-right"><%= humanized_money_with_symbol ad.price %></h4>
                                 <h4><a href="#"><%= truncate(ad.title, length: 20) %></a>
                                 </h4>
                                 <p><%= truncate(ad.description, length: 100) %></p>

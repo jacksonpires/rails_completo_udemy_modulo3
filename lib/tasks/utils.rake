@@ -26,7 +26,8 @@ namespace :utils do
         title: Faker::Lorem.sentence([2,3,4,5].sample),
         description: LeroleroGenerator.paragraph(Random.rand(3)),
         member: Member.all.sample,
-        category: Category.all.sample
+        category: Category.all.sample,
+        price: "#{Random.rand(500)},#{Random.rand(99)}"
       )
     end
 
