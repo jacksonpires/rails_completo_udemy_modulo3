@@ -1,3 +1,5 @@
+<h1>Listando Anúncios</h1>
+
 <table class="table table-hover">
   <thead>
     <tr>
@@ -6,6 +8,7 @@
       <th>Título</th>
       <th>Categoria</th>
       <th>Preço</th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
@@ -16,6 +19,11 @@
         <td><%= ad.title %></td>
         <td><%= ad.category.description %></td>
         <td><%= humanized_money_with_symbol ad.price %></td>
+        <td>
+          <%= link_to edit_site_profile_ad_path(ad), class:"btn btn-primary btn-sm" do %>
+            <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+          <% end %>
+        </td>
       </tr>
     <% end %>
   </tbody>
