@@ -17,6 +17,21 @@ class Site::Profile::AdsController < Site::ProfileController
     end
   end
 
+  def new
+    @ad = Ad.new
+  end
+
+  def create
+    @ad = Ad.new(params_ad)
+    @ad.member = current_member
+
+    if @ad.save
+      redirect_to site_profile_ads_path, notice: "Anúncio cadastrado com sucesso!"
+    else
+      render :new
+    end
+  end
+
   private
 
     def set_ad

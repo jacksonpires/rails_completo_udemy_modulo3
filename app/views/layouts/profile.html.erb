@@ -49,6 +49,9 @@
                 <li>
                     <%= link_to "Meus anúncios", site_profile_ads_path %>
                 </li>
+                <li>
+                    <%= link_to "Novo anúncio", new_site_profile_ad_path %>
+                </li>
             </ul>
         </div>
         <!-- /#sidebar-wrapper -->
@@ -68,7 +71,9 @@
     </div>
     <!-- /#wrapper -->
 
-
+    <% if notice %>
+        <%= javascript_tag "$.notify('#{notice}', 'success');" %>
+    <% end %>
 </body>
 
 
