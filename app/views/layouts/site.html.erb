@@ -14,9 +14,6 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= stylesheet_link_tag    'site', media: 'all', 'data-turbolinks-track' => true %>
 
-    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-    <%= javascript_include_tag 'site', 'data-turbolinks-track' => true %>
-
     <%= csrf_meta_tags %>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -32,6 +29,9 @@
     <%= render partial: "layouts/site_shared/navigation" %>
     <%= yield %>
     <%= render partial: "layouts/site_shared/footer" %>
+
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'site', 'data-turbolinks-track' => true %>
 </body>
 
 </html>
