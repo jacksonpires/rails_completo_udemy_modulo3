@@ -26,10 +26,12 @@ gem 'jquery-ui-rails'
 source 'https://rails-assets.org' do
   # Bootstrap
   gem 'rails-assets-bootstrap', '3.3.7'
-  # NotifyJS
-  gem 'rails-assets-notifyjs'
+  # Bootstrap Notify
+  gem 'rails-assets-bootstrap.growl'
   # BootboxJS
   gem 'rails-assets-bootbox'
+  # Animate CSS
+  gem 'rails-assets-animate-css'
 end
 
 # Use sqlite3 as the database for Active Record'

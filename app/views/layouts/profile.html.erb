@@ -73,9 +73,7 @@
 
     <%= yield :javascripts %>
 
-    <% if notice %>
-        <%= javascript_tag "$.notify('#{notice}', 'success');" %>
-    <% end %>
+    <%= render partial: 'layouts/shared/notifications'  %>
 </body>
 
 

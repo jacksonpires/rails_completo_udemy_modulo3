@@ -1,0 +1,9 @@
+<% if notice %>
+  <%= javascript_tag "$.notify( { message: '#{notice}'}, { type: 'success', placement: { from: 'top', align: 'center' }});" %>
+<% end %>
+
+<% if alert %>
+    <%= javascript_tag "$.notify( { message: '#{alert}'}, { type: 'danger', placement: { from: 'top', align: 'center' }});" %>
+<% end %>
+
+

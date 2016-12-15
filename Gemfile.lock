@@ -155,12 +155,15 @@ GEM
       bundler (>= 1.3.0, < 2.0)
       railties (= 4.2.5)
       sprockets-rails
+    rails-assets-animate-css (3.5.2)
     rails-assets-bootbox (4.4.0)
       rails-assets-bootstrap (>= 3.0.0)
     rails-assets-bootstrap (3.3.7)
       rails-assets-jquery (>= 1.9.1, < 4)
+    rails-assets-bootstrap.growl (3.1.3)
+      rails-assets-bootstrap (>= 2.0.0)
+      rails-assets-jquery (>= 1.10.2)
     rails-assets-jquery (3.1.0)
-    rails-assets-notifyjs (0.4.2)
     rails-deprecated_sanitizer (1.0.3)
       activesupport (>= 4.2.0.alpha)
     rails-dom-testing (1.0.7)
@@ -256,9 +259,10 @@ DEPENDENCIES
   paperclip (~> 5.0.0)
   pundit
   rails (= 4.2.5)
+  rails-assets-animate-css!
   rails-assets-bootbox!
   rails-assets-bootstrap (= 3.3.7)!
-  rails-assets-notifyjs!
+  rails-assets-bootstrap.growl!
   rails-erd
   rails-i18n
   sass-rails (~> 5.0)
