@@ -1,0 +1,2 @@
+module Site::AdDetailHelper
+end
