@@ -10,19 +10,16 @@
 
                         <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
 
-
-                        <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: "form-horizontal", role:"form" }) do |f| %>
+                        <form id="loginform" class="form-horizontal" role="form">
 
                             <div style="margin-bottom: 25px" class="input-group">
                                         <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-
-                                        <%= f.email_field :email, autofocus: true, class:"form-control", placeholder:"Email" %>
+                                        <input id="login-username" type="text" class="form-control" name="username" value="" placeholder="username or email">
                                     </div>
 
                             <div style="margin-bottom: 25px" class="input-group">
                                         <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-
-                                        <%= f.password_field :password, autocomplete: "off", class:"form-control", placeholder:"Senha" %>
+                                        <input id="login-password" type="password" class="form-control" name="password" placeholder="password">
                                     </div>
 
 
@@ -30,10 +27,7 @@
                             <div class="input-group">
                                       <div class="checkbox">
                                         <label>
-                                          <% if devise_mapping.rememberable? -%>
-                                              <%= f.check_box :remember_me %>
-                                              Lembrar-me
-                                          <% end -%>
+                                          <input id="login-remember" type="checkbox" name="remember" value="1"> Remember me
                                         </label>
                                       </div>
                                     </div>
@@ -43,8 +37,7 @@
                                     <!-- Button -->
 
                                     <div class="col-sm-12 controls">
-                                      <%= f.submit "Entrar", class: "btn btn-success" %>
-
+                                      <a id="btn-login" href="#" class="btn btn-success">Login  </a>
                                       <a id="btn-fblogin" href="#" class="btn btn-primary">Login with Facebook</a>
 
                                     </div>
@@ -61,7 +54,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            <% end %>
+                            </form>
 
 
 
