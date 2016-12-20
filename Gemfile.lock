@@ -73,6 +73,8 @@ GEM
       responders
       warden (~> 1.2.3)
     devise-i18n (1.1.0)
+    doctor_ipsum (0.3.1)
+      i18n
     enum_help (0.0.15)
     erubis (2.7.0)
     eventmachine (1.0.9.1)
@@ -248,6 +250,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   devise
   devise-i18n
+  doctor_ipsum
   enum_help
   faker
   foreman
