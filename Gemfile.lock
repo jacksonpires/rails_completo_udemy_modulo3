@@ -188,6 +188,7 @@ GEM
     rake (11.2.2)
     rdoc (4.2.2)
       json (~> 1.4)
+    redcarpet (3.3.4)
     responders (2.3.0)
       railties (>= 4.2.0, < 5.1)
     ruby-graphviz (1.2.2)
@@ -265,6 +266,7 @@ DEPENDENCIES
   rails-assets-bootstrap.growl!
   rails-erd
   rails-i18n
+  redcarpet
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   spring
