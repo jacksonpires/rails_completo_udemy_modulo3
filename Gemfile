@@ -34,6 +34,10 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-bootbox'
   # Animate CSS
   gem 'rails-assets-animate-css'
+  # Bootstrap Mardown
+  gem 'rails-assets-bootstrap-markdown'
+  # Marked
+  gem 'rails-assets-marked'
 end
 
 # Use sqlite3 as the database for Active Record'
