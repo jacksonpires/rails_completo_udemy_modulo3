@@ -41,6 +41,8 @@
         updated_at: Atualizado em
         title: Título
         description: Descrição
+        description_md: Descrição/Markdown
+        description_short: Breve Descrição
         member_id: Código do usuário
         category_id: Código da categoria
         finish_date: Data de finalização
