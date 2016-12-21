@@ -5,7 +5,7 @@ class Ad < ActiveRecord::Base
 
   # Associations
   belongs_to :member
-  belongs_to :category
+  belongs_to :category, counter_cache: true
 
   # Validates
   validates :title, :description_md, :description_short, :category, presence: true

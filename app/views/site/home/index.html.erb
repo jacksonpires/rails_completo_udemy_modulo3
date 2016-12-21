@@ -7,7 +7,7 @@
             <p class="lead">Categorias</p>
             <div class="list-group">
                 <% @categories.each do |category| %>
-                    <a href="#" class="list-group-item"><%= category.description %></a>
+                    <a href="#" class="list-group-item"><%= category.description %> (<%= category.ads_count %>)</a>
                 <% end %>
             </div>
         </div>
