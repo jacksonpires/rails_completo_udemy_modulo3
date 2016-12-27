@@ -1,0 +1,8 @@
+<div id="home-sidebar" class="col-md-3">
+    <p class="lead">Categorias</p>
+    <div class="list-group">
+        <% @categories.each do |category| %>
+            <%= link_to "#{category.description} (#{category.ads_count})", site_category_path(category), class: "list-group-item" %>
+        <% end %>
+    </div>
+</div>
