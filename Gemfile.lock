@@ -85,6 +85,8 @@ GEM
       railties (>= 3.2, < 5.1)
     foreman (0.82.0)
       thor (~> 0.19.1)
+    friendly_id (5.2.0)
+      activerecord (>= 4.0.0)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
     i18n (0.7.0)
@@ -257,6 +259,7 @@ DEPENDENCIES
   enum_help
   faker
   foreman
+  friendly_id
   jbuilder (~> 2.0)
   jquery-rails
   jquery-ui-rails
