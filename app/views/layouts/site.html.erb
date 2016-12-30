@@ -28,7 +28,31 @@
 <body>
     <div id="global-spin" class="loading" style="display: none;">Loading&#8230;</div>
     <%= render partial: "layouts/site_shared/navigation" %>
-    <%= yield %>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <div class="row">
+
+            <%= render partial: 'layouts/site_shared/sidebar' %>
+
+            <div id="home-detail" class="col-md-9">
+
+                <% if controller_path == 'site/home' %>
+                    <%= render partial: 'layouts/site_shared/carousel' %>
+                <% end %>
+
+                <div class="row">
+                    <%= yield %>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <!-- /.container -->
+
     <%= render partial: "layouts/site_shared/footer" %>
 
     <%= javascript_include_tag 'application' %>
