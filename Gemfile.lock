@@ -100,6 +100,12 @@ GEM
     jquery-ui-rails (6.0.1)
       railties (>= 3.2.16)
     json (1.8.3)
+    kaminari (0.17.0)
+      actionpack (>= 3.0.0)
+      activesupport (>= 3.0.0)
+    kaminari-i18n (0.4.0)
+      kaminari
+      rails
     lerolero_generator (1.0.1)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
@@ -264,6 +270,8 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   jquery-ui-rails
+  kaminari
+  kaminari-i18n
   lerolero_generator
   mailcatcher
   money-rails

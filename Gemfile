@@ -28,6 +28,10 @@ gem 'redcarpet'
 gem 'friendly_id'
 # If Turbolinks are not enough for you. Wiselinks makes your application work faster.
 gem 'wiselinks'
+# A Scope & Engine based, clean, powerful, customizable and sophisticated paginator for Ruby webapps
+gem 'kaminari'
+# Translations for the kaminari gem
+gem  'kaminari-i18n'
 
 source 'https://rails-assets.org' do
   # Bootstrap
