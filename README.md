@@ -15,3 +15,10 @@ Deseja adquirir o curso? Acesse o link abaixo e saiba como.
 sudo apt-get update
 sudo apt-get install imagemagick
 ```
+
+* Graphviz (https://www.graphviz.org) - Apenas para Ambiente de Desenvolvimento
+
+```
+sudo apt-get update
+sudo apt-get install graphviz
+```
