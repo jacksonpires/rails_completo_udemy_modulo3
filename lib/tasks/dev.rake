@@ -14,6 +14,7 @@ namespace :dev do
     puts %x(rake dev:generate_admins)
     puts %x(rake dev:generate_members)
     puts %x(rake dev:generate_ads)
+    puts %x(rake dev:generate_comments)
 
     puts "Setup completado com sucesso!"
   end
@@ -91,5 +92,24 @@ namespace :dev do
 
   def markdown_fake
     %x(ruby -e "require 'doctor_ipsum'; puts DoctorIpsum::Markdown.entry")
+  end
+
+  #################################################################
+
+  desc "Cria Comentários Fake"
+  task generate_comments: :environment do
+    puts "Cadastrando COMENTÁRIOS..."
+
+    Ad.all.each do |ad|
+      (Random.rand(3)).times do
+        Comment.create!(
+          body: Faker::Lorem.paragraph([1,2,3].sample),
+          member: Member.all.sample,
+          ad: ad
+        )
+      end
+    end
+
+    puts "COMENTÁRIOS cadastrados com sucesso!"
   end
 end

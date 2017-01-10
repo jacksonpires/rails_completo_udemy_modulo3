@@ -66,10 +66,12 @@ ActiveRecord::Schema.define(version: 20170105220728) do
   create_table "comments", force: :cascade do |t|
     t.text     "body"
     t.integer  "member_id"
+    t.integer  "ad_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
+  add_index "comments", ["ad_id"], name: "index_comments_on_ad_id"
   add_index "comments", ["member_id"], name: "index_comments_on_member_id"
 
   create_table "friendly_id_slugs", force: :cascade do |t|
