@@ -1,0 +1,24 @@
+<!-- Modal -->
+<%= form_tag site_comments_path do %>
+  <div class="modal fade" id="commentModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Deixe seu comentário</h4>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+              <label>Comentário</label>
+              <%= text_area :comment, :body, class:"form-control", rows: 5 %>
+              <%= hidden_field :comment, :ad_id, value: @ad.id %>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+          <%= submit_tag "Enviar", class: "btn btn-primary" %>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
