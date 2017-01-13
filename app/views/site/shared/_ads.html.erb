@@ -10,14 +10,7 @@
                 <p><%= truncate(ad.description_short, length: 100) %></p>
             </div>
             <div class="ratings">
-                <p class="pull-right">15 reviews</p>
-                <p>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                    <span class="glyphicon glyphicon-star"></span>
-                </p>
+                <%= rating_for ad, 'quality' %>
             </div>
         </div>
     </div>

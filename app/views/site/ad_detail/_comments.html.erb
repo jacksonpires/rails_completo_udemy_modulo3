@@ -10,7 +10,7 @@
             <span class="pull-right"><%= l comment.created_at %></span>
             <p><%= comment.body %></p>
 
-            <% if comment.member.id == current_member.id %>
+            <% if (current_member) && (comment.member.id == current_member.id) %>
                 <%= rating_for_user @ad, current_member, 'quality' %>
             <% end %>
         </div>
