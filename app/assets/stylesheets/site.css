@@ -32,6 +32,10 @@
     width: 100%;
 }
 
+.star img {
+    width: 15px;
+}
+
 .ratings {
     padding-right: 10px;
     padding-left: 10px;

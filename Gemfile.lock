@@ -199,6 +199,7 @@ GEM
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     rake (11.2.2)
+    ratyrate (1.2.2.alpha)
     rdoc (4.2.2)
       json (~> 1.4)
     redcarpet (3.3.4)
@@ -286,6 +287,7 @@ DEPENDENCIES
   rails-assets-marked!
   rails-erd
   rails-i18n
+  ratyrate
   redcarpet
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
