@@ -16,20 +16,20 @@
             <ul class="nav navbar-nav pull-right">
                 <% unless member_signed_in? %>
                     <li>
-                        <%= link_to "Login", new_member_session_path %>
+                        <%= link_to "#{t('top_menu.sign_in')}", new_member_session_path %>
                     </li>
                     <li>
-                        <%= link_to "Cadastrar-se", new_member_registration_path %>
+                        <%= link_to "#{t('top_menu.sign_up')}", new_member_registration_path %>
                     </li>
                 <% else %>
                     <li>
                         <%= link_to current_member.email, "#" %>
                     </li>
                     <li>
-                        <%= link_to "Perfil", site_profile_dashboard_index_path %>
+                        <%= link_to "#{t('top_menu.profile')}", site_profile_dashboard_index_path %>
                     </li>
                     <li>
-                        <%= link_to "Sair", destroy_member_session_path, method: :delete %>
+                        <%= link_to "#{t('top_menu.logout')}", destroy_member_session_path, method: :delete %>
                     </li>
                 <% end %>
             </ul>

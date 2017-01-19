@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>EscamboApp</title>
+    <title><%= t('app.profile_subtitle') %></title>
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= stylesheet_link_tag    'site', media: 'all' %>
@@ -39,13 +39,13 @@
                     </a>
                 </li>
                 <li>
-                    <%= link_to "Dashboard", site_profile_dashboard_index_path %>
+                    <%= link_to "#{t('profile_menu.dashboard')}", site_profile_dashboard_index_path %>
                 </li>
                 <li>
-                    <%= link_to "Meus anúncios", site_profile_ads_path %>
+                    <%= link_to "#{t('profile_menu.my_ads')}", site_profile_ads_path %>
                 </li>
                 <li>
-                    <%= link_to "Novo anúncio", new_site_profile_ad_path %>
+                    <%= link_to "#{t('profile_menu.new_ad')}", new_site_profile_ad_path %>
                 </li>
             </ul>
         </div>
@@ -76,7 +76,4 @@
     <%= render partial: 'layouts/shared/notifications'  %>
 </body>
 
-
-
 </html>
-

@@ -11,3 +11,9 @@
     send_message_to: Enviar mensagem para %{name}
     recipient: Destinatário
     subject: Assunto
+    let_your_comment: Deixe seu comentário
+    comment: Comentário
+    comments: comentários
+    reviews: avaliações
+    login_to_comment: Efetue login para comentar
+    er_diagram: Diagrama ER

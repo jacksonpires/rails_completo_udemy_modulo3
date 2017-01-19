@@ -1,0 +1,6 @@
+'pt-BR':
+  backoffice_menu:
+    dashboard: Dashboard
+    categories: Categorias
+    admins: Administradores
+    er_diagram: Diagrama ER

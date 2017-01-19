@@ -4,10 +4,10 @@
   <thead>
     <tr>
       <th>#</th>
-      <th>Imagem</th>
-      <th>Título</th>
-      <th>Categoria</th>
-      <th>Preço</th>
+      <th><%= @ads.model.human_attribute_name('image') %></th>
+      <th><%= @ads.model.human_attribute_name('title') %></th>
+      <th><%= @ads.model.human_attribute_name('category') %></th>
+      <th><%= @ads.model.human_attribute_name('price') %></th>
       <th></th>
     </tr>
   </thead>

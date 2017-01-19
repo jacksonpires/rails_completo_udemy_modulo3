@@ -45,4 +45,7 @@
         description_short: Breve Descrição
         member_id: Código do usuário
         category_id: Código da categoria
+        category: Categoria
         finish_date: Data de finalização
+        image: Imagem
+        price: Preço
