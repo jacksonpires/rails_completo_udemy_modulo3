@@ -13,6 +13,9 @@
       ad:
         one: Anúncio
         other: Anúncios
+      profile_member:
+        one: Perfil
+        other: Perfil
     attributes:
       member:
         id: Código
@@ -49,3 +52,11 @@
         finish_date: Data de finalização
         image: Imagem
         price: Preço
+      profile_member:
+        id: Código
+        created_at: Criado em
+        updated_at: Atualizado em
+        first_name: Primeiro nome
+        second_name: Segundo nome
+        birthdate: Data de nascimento
+
