@@ -47,6 +47,9 @@
                 <li>
                     <%= link_to "#{t('profile_menu.new_ad')}", new_site_profile_ad_path %>
                 </li>
+                <li>
+                    <%= link_to "#{t('profile_menu.my_data')}", edit_site_profile_my_datum_path(current_member.id) %>
+                </li>
             </ul>
         </div>
         <!-- /#sidebar-wrapper -->

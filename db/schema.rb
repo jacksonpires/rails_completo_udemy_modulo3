@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170112233535) do
+ActiveRecord::Schema.define(version: 20170119230220) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -120,6 +120,14 @@ ActiveRecord::Schema.define(version: 20170112233535) do
     t.float    "overall_avg",   null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "profile_members", force: :cascade do |t|
+    t.string   "first_name"
+    t.string   "second_name"
+    t.date     "birthdate"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "rates", force: :cascade do |t|
