@@ -98,16 +98,14 @@
 
                                 <%= f.fields_for :profile_member do |profile_fields| %>
                                     <div class="form-group">
-                                        <label for="first_name" class="col-md-3
-                                        <%= f.label :first_name, class:"col-md-3 control-label" %>
+                                        <%= profile_fields.label :first_name, class:"col-md-3 control-label" %>
                                         <div class="col-md-9">
                                             <%= profile_fields.text_field :first_name, class:"form-control" %>
                                         </div>
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="second_name" class="col-md-3
-                                        <%= f.label :second_name, class:"col-md-3 control-label" %>
+                                        <%= profile_fields.label :second_name, class:"col-md-3 control-label" %>
                                         <div class="col-md-9">
                                             <%= profile_fields.text_field :second_name, class:"form-control" %>
                                         </div>
