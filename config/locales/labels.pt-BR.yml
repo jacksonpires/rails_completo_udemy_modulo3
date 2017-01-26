@@ -3,6 +3,11 @@
     login: Login
     identify_yourself: Identifique-se
     remember_me: Lembrar-se de mim
+    forgot_passoword: Esqueceu sua senha?
+    dont_have_an_account: Não tem uma conta?
+    sign_up: Cadastre-se
+    sign_up_here: Cadastre-se aqui!
+    sign_in_with_facebook: Login com Facebook
     enter: Entrar
     email: E-mail
     password: Senha
