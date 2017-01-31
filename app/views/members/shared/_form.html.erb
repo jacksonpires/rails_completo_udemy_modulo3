@@ -3,7 +3,9 @@
             <div class="panel panel-info" >
                     <div class="panel-heading">
                         <div class="panel-title"><%= t('labels.login') %></div>
-                        <div style="float:right; font-size: 80%; position: relative; top:-18px"><a href="#"><%= t('labels.forgot_passoword') %></a></div>
+                        <div style="float:right; font-size: 80%; position: relative; top:-18px">
+                            <%= link_to t('labels.forgot_passoword'), new_member_password_path %>
+                        </div>
                     </div>
 
                     <div style="padding-top:30px" class="panel-body" >
