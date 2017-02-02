@@ -1,16 +1,47 @@
-<h2>Forgot your password?</h2>
+<div class="container">
+        <div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+            <div class="panel panel-info" >
+              <div class="panel-heading">
+                  <div class="panel-title">Recuperar Senha</div>
+              </div>
 
-<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-  <%= devise_error_messages! %>
+              <div style="padding-top:30px" class="panel-body" >
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
+                  <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
 
-  <div class="actions">
-    <%= f.submit "Send me reset password instructions" %>
-  </div>
+
+                  <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { class: "form-horizontal", role:"form" }) do |f| %>
+
+                      <div style="margin-bottom: 25px" class="input-group">
+                          <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+
+                          <%= f.email_field :email, autofocus: true, class:"form-control", placeholder:"Email" %>
+                      </div>
+
+
+                      <div class="input-group">
+
+                          <div style="margin-top:10px" class="form-group">
+                              <!-- Button -->
+
+                              <div class="col-sm-12 controls">
+                                <%= f.submit "Envie-me instruções para redefinir a senha.", class: "btn btn-success" %>
+                              </div>
+                          </div>
+
+                      <% end %>
+
+                  </div>
+              </div>
+        </div>
+    </div>
+
+<% flash.each do |key, value| %>
+  <%= javascript_tag "$.notify( { message: '#{value}'}, { type: 'danger', placement: { from: 'top', align: 'center' }});" %>
 <% end %>
 
-<%= render "members/shared/links" %>
+<% unless devise_error_messages!.blank? %>
+  <% resource.errors.full_messages.each do |message| %>
+      <%= javascript_tag "$.notify( { message: '#{message}'}, { type: 'danger', placement: { from: 'top', align: 'center' }});" %>
+  <% end %>
+<% end %>
