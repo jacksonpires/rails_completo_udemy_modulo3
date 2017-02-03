@@ -13,7 +13,7 @@ Deseja adquirir o curso? Acesse o link abaixo e saiba como.
 
 ```
 sudo apt-get update
-sudo apt-get install imagemagick
+sudo apt-get install imagemagick libimagickwand-dev
 ```
 
 * Graphviz (https://www.graphviz.org) - Apenas para Ambiente de Desenvolvimento
