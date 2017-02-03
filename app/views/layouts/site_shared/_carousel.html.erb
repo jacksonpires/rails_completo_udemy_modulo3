@@ -9,13 +9,13 @@
             </ol>
             <div class="carousel-inner">
                 <div class="item active">
-                    <img class="slide-image" src="http://placehold.it/800x300" alt="">
+                    <%= link_to (image_tag @carousel.first.picture.url(:large)), site_ad_detail_path(@carousel.first), remote: true, data: { push: :partial}, class: "slide-image" %>
                 </div>
                 <div class="item">
-                    <img class="slide-image" src="http://placehold.it/800x300" alt="">
+                    <%= link_to (image_tag @carousel.second.picture.url(:large)), site_ad_detail_path(@carousel.second), remote: true, data: { push: :partial}, class: "slide-image" %>
                 </div>
                 <div class="item">
-                    <img class="slide-image" src="http://placehold.it/800x300" alt="">
+                    <%= link_to (image_tag @carousel.third.picture.url(:large)), site_ad_detail_path(@carousel.third), remote: true, data: { push: :partial}, class: "slide-image" %>
                 </div>
             </div>
             <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
