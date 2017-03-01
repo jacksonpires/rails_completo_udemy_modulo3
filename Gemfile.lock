@@ -65,9 +65,6 @@ GEM
     capistrano-rails (1.2.2)
       capistrano (~> 3.1)
       capistrano-bundler (~> 1.1)
-    capistrano-rvm (0.1.2)
-      capistrano (~> 3.0)
-      sshkit (~> 1.2)
     choice (0.2.0)
     climate_control (0.0.3)
       activesupport (>= 3.0)
@@ -288,7 +285,6 @@ DEPENDENCIES
   capistrano (~> 3.7)
   capistrano-bundler (~> 1.2)
   capistrano-rails (~> 1.2)
-  capistrano-rvm
   coffee-rails (~> 4.1.0)
   devise
   devise-i18n
@@ -305,7 +301,7 @@ DEPENDENCIES
   lerolero_generator
   mailcatcher
   money-rails
-  mysql2 (~> 0.3.18)
+  mysql2
   paperclip (~> 5.0.0)
   pundit
   rails (= 4.2.5)

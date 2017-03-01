@@ -105,6 +105,7 @@ group :development do
   gem 'capistrano-bundler', '~> 1.2'
   # Bundler support for Capistrano 3.x
   gem 'capistrano-rails', '~> 1.2'
+  # RVM support for Capistrano v3
   gem 'capistrano-rvm'
 end
 
