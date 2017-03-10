@@ -77,9 +77,6 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
-# Use Unicorn as the app server
-# gem 'unicorn'
-
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -107,10 +104,14 @@ group :development do
   gem 'capistrano-rails', '~> 1.2'
   # RVM support for Capistrano v3
   gem 'capistrano-rvm'
+  # Unicorn for Capistrano v3
+  gem 'capistrano3-unicorn'
 end
 
 group :production do
   # MySQL Adapter
   gem 'mysql2', '~> 0.3.18'
+  # Use Unicorn as the app server
+  gem 'unicorn'
 end
 
