@@ -113,5 +113,7 @@ group :production do
   gem 'mysql2', '~> 0.3.18'
   # Use Unicorn as the app server
   gem 'unicorn'
+  # Mailgun's Official Ruby Library
+  gem 'mailgun-ruby', '~>1.1.4'
 end
 
