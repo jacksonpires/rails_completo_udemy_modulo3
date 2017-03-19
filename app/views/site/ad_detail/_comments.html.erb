@@ -1,18 +1,14 @@
 <% @ad.comments.each do |comment| %>
     <div class="row">
         <div class="col-md-12">
-            <span class="glyphicon glyphicon-star"></span>
-            <span class="glyphicon glyphicon-star"></span>
-            <span class="glyphicon glyphicon-star"></span>
-            <span class="glyphicon glyphicon-star"></span>
-            <span class="glyphicon glyphicon-star-empty"></span>
-            <%= comment.member.email %>
-            <span class="pull-right"><%= time_ago_in_words(comment.created_at) %></span>
-            <p><%= comment.body %></p>
-
             <% if (current_member) && (comment.member.id == current_member.id) %>
                 <%= rating_for_user @ad, current_member, 'quality', star_path: '/images/ratyrate' %>
             <% end %>
+
+            <p><%= comment.body %></p>
+
+            <p id="time-ago"><strong><%= comment.member.email %></strong></p>
+            <p><strong><%= time_ago_in_words(comment.created_at) %></strong></p>
         </div>
     </div>
 
