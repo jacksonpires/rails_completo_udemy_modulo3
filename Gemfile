@@ -40,6 +40,8 @@ gem 'faker'
 gem 'doctor_ipsum'
 # O Lero-lero Generator é uma ferramenta capaz de gerar frases que 'falam' muita coisa mas que não tem conteúdo algum.
 gem 'lerolero_generator'
+# Biblioteca de integração em Ruby para o Pagseguro
+gem "pagseguro-oficial", "~> 2.5.0"
 
 source 'https://rails-assets.org' do
   # Bootstrap

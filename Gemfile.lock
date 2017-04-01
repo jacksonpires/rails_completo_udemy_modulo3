@@ -39,6 +39,8 @@ GEM
       tzinfo (~> 1.1)
     airbrussh (1.1.2)
       sshkit (>= 1.6.1, != 1.7.0)
+    aitch (0.5.0)
+      nokogiri (>= 1.6.0)
     arel (6.0.3)
     bcrypt (3.1.11)
     better_errors (2.1.1)
@@ -172,6 +174,11 @@ GEM
       mini_portile2 (~> 2.1.0)
       pkg-config (~> 1.1.7)
     orm_adapter (0.5.0)
+    pagseguro-oficial (2.5.0)
+      aitch (~> 0.2)
+      i18n (~> 0.7)
+      json (~> 1.8)
+      nokogiri (~> 1.6)
     paperclip (5.0.0)
       activemodel (>= 4.2.0)
       activesupport (>= 4.2.0)
@@ -329,6 +336,7 @@ DEPENDENCIES
   mailgun-ruby (~> 1.1.4)
   money-rails
   mysql2 (~> 0.3.18)
+  pagseguro-oficial (~> 2.5.0)
   paperclip (~> 5.0.0)
   pundit
   rails (= 4.2.5)
