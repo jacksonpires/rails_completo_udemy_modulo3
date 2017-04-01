@@ -1,6 +1,11 @@
 class Checkout::PaymentsController < ApplicationController
   def create
-    # id AD
-    render text: "Processando...."
+    ad = Ad.find(params[:ad_id])
+    ad.processing!
+
+    order = Order.create( ad: ad, buyer_id: current_member.id )
+    order.waiting!
+
+    render text: "Processando.... Pedido: #{order.status_i18n} - Anúncio: #{ad.status_i18n}"
   end
 end
