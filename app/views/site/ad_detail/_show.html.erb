@@ -6,7 +6,10 @@
 
         <% if member_signed_in? %>
           <div class="text-right">
-              <%= link_to "Comprar", '#', class:"btn btn-success" %>
+              <%= form_tag(checkout_payments_path) do %>
+                <%= hidden_field_tag :ad_id, @ad.id %>
+                <%= submit_tag "Comprar", class:"btn btn-success", data: { confirm: "Deseja realmente comprar esse produto?"}%>
+              <% end %>
           </div>
         <% else %>
           <div class="text-right">
