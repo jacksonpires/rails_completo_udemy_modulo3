@@ -1,0 +1,2 @@
+module Checkout::NotificationsHelper
+end
