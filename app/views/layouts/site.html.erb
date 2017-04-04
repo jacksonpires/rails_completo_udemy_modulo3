@@ -41,7 +41,7 @@
                       <div class="col-lg-6">
                         <div class="input-group">
 
-                          <%= text_field_tag(:q, params[:q] , { class:"form-control", placeholder: "#{t('placeholder.search_for')}" }) %>
+                          <%= text_field_tag(:q, params[:q] , { class:"form-control", placeholder: "#{cookies[:search_term] ? cookies[:search_term] : t('placeholder.search_for')}" }) %>
 
                           <span class="input-group-btn">
                             <%= submit_tag("#{t('buttons.search')}", class:"btn btn-default") %>
