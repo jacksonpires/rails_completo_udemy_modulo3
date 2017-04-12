@@ -6,6 +6,10 @@
             <%= link_to new_backoffice_category_path, class:"btn btn-success btn-circle pull-right", style:"margin-top: -5px" do %>
                 <i class="fa fa-plus"></i>
             <% end %>
+
+            <%= link_to backoffice_categories_path(format: :pdf), class:"btn btn-danger btn-circle pull-right", style:"margin-top: -5px; margin-right: 5px;" do %>
+                <i class="fa fa-file-pdf-o"></i>
+            <% end %>
         </div>
         <!-- /.panel-heading -->
         <div class="panel-body">
