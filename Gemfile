@@ -41,6 +41,8 @@ gem 'doctor_ipsum'
 # O Lero-lero Generator é uma ferramenta capaz de gerar frases que 'falam' muita coisa mas que não tem conteúdo algum.
 gem 'lerolero_generator'
 gem 'prawn-rails'
+gem 'wicked_pdf'
+gem 'wkhtmltopdf-binary'
 
 source 'https://rails-assets.org' do
   # Bootstrap
