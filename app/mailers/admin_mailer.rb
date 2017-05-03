@@ -7,6 +7,7 @@ class AdminMailer < ApplicationMailer
   end
 
   def send_message(current_admin, recipient, subject, message)
+    sleep(7)
     @current_admin = current_admin
     @recipient = recipient
     @subject = subject
