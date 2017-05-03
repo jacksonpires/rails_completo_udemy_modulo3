@@ -13,7 +13,7 @@ class Backoffice::SendMailController < ApplicationController
       AdminMailer.send_message(current_admin,
                                params[:'recipient-text'],
                                params[:'subject-text'],
-                               params['message-text']).deliver_now
+                               params['message-text']).deliver_later #deliver_now
 
       @notify_message = I18n.t('messages.email_delivered')
       @notify_flag = "success"
