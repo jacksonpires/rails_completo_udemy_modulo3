@@ -1,4 +1,6 @@
 class Admin < ActiveRecord::Base
+  rolify
+
   # Constants
   ROLES = {:full_access => 0, :restricted_access => 1}
 
