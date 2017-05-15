@@ -10,7 +10,7 @@ class Admin < ActiveRecord::Base
   # Scopes
   # scope :with_full_access, -> { where(role: ROLES[:full_access]) }
   # scope :with_restricted_access, -> { where(role: ROLES[:restricted_access]) }
-  scope :with_restricted_access, -> { with_role(Role::OPTIONS[1])) }
+  scope :with_restricted_access, -> { with_role(Role.availables[1]) }
 
   # def self.with_full_access
   #   where(role: 'full_access')
@@ -20,4 +20,17 @@ class Admin < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+
+  def checked_roles
+    self.roles.collect do |role|
+      role.name
+    end
+  end
+
+  def roles_descriptions
+    self.roles.collect do |role|
+      Role::OPTIONS[role.name.to_sym]
+    end
+  end
+
 end
