@@ -84,6 +84,7 @@ GEM
       execjs
     coffee-script-source (1.10.0)
     concurrent-ruby (1.0.2)
+    crass (1.0.5)
     daemons (1.2.4)
     debug_inspector (0.0.2)
     devise (4.2.0)
@@ -132,7 +133,8 @@ GEM
       rails
     kgio (2.11.0)
     lerolero_generator (1.0.1)
-    loofah (2.0.3)
+    loofah (2.3.1)
+      crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     mail (2.6.4)
       mime-types (>= 1.16, < 4)
@@ -168,9 +170,8 @@ GEM
       net-ssh (>= 2.6.5)
     net-ssh (4.1.0)
     netrc (0.11.0)
-    nokogiri (1.6.8)
+    nokogiri (1.6.8.1)
       mini_portile2 (~> 2.1.0)
-      pkg-config (~> 1.1.7)
     orm_adapter (0.5.0)
     paperclip (5.0.0)
       activemodel (>= 4.2.0)
@@ -178,7 +179,6 @@ GEM
       cocaine (~> 0.5.5)
       mime-types
       mimemagic (~> 0.3.0)
-    pkg-config (1.1.7)
     pundit (1.1.0)
       activesupport (>= 3.0.0)
     rack (1.6.4)
